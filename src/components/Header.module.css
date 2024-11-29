@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px;
+}
+.header h1 {
+ color: rgb(241, 203, 153);
+}
+
+.btnContainer {
+  align-self: flex-end;
+}
+
+.btnContainer button {
+  padding: 7px 14px;
+  background-color: rgb(241, 203, 153);
+  border-radius: 9px;
+  border: none;
+  font-family: "Parkinsans", sans-serif;}
+
+hr {
+  width: 75%;
+  border: 1px solid #000;
+}
+
+@media screen and (min-width: 900px) {
+  hr {
+    width: 100%;
+  }
+  .btnContainer button{
+    padding: 10px 17px;
+  }
+  .btnContainer button:hover {
+    cursor: pointer;
+    background-color: rgb(203, 203, 166);
+  }
+}
