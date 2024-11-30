@@ -7,5 +7,6 @@ body {
   font-family: "Parkinsans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
+  position: relative;
 }
 

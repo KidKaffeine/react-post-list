@@ -1,12 +1,14 @@
 import styles from "./Header.module.css";
 
-function Header() {
+function Header({ isModalOpen }) {
   return (
     <>
       <header className={styles.header}>
-        <h1>Posts hits!</h1>   
+        <h1>Posts hits!</h1>
         <div className={styles.btnContainer}>
-          <button>Add a new hit</button>
+          <button type="button" onClick={() => isModalOpen(true)}>
+            Add a new hit
+          </button>
         </div>
       </header>
       <hr />
