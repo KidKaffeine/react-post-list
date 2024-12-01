@@ -1,3 +1,7 @@
+h2 {
+    text-align: center;
+}
+
 .postList {
     list-style: none;
     margin: 0;
@@ -18,7 +22,7 @@
     color: rgb(88, 92, 65);
 }
 
-div {
+.postList div {
     display: inline;
 }
 
@@ -37,6 +41,12 @@ div {
     margin-right: 10px;
 }
 
+.postList button {
+    background-color: transparent;
+    margin-left: 90px;
+    border: none;
+}
+
 @media only screen and (min-width: 768px) {
     .postList {
         flex-direction: row;
@@ -47,5 +57,9 @@ div {
 
     .listItem {
         width: 20%;
+    }
+
+    .postList button {
+        margin-left: 130px;
     }
 }

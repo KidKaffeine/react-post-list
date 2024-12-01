@@ -4,6 +4,7 @@
   justify-content: space-between;
   padding: 25px;
 }
+
 .header h1 {
  color: rgb(241, 203, 153);
 }
@@ -28,7 +29,7 @@ hr {
 
 @media only screen and (min-width: 768px) {
   hr {
-    width: 100%;
+    width: 80%;
   }
   .btnContainer button{
     padding: 10px 17px;
