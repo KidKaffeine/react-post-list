@@ -1,16 +1,19 @@
 import styles from "./Modal.module.css";
 import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
-function Modal({ isModalOpen }) {
-  const [post, setPost] = useState({
+function Modal({ isModalOpen, getNewPost }) {
+  const [newPost, setNewPost] = useState({
+    id: uuidv4(),
     text: "",
     author: "",
   });
 
   const handleSubmitForm = (e) => {
-    e.preventDefault()
-    isModalOpen(false)
-  }
+    e.preventDefault();
+    isModalOpen(false);
+    getNewPost((state) => [...state, newPost]);
+  };
 
   return (
     <>
@@ -26,8 +29,8 @@ function Modal({ isModalOpen }) {
             cols={30}
             required
             minLength={10}
-            value={post.text}
-            onChange={(e) => setPost({ ...post, text: e.target.value })}
+            value={newPost.text}
+            onChange={(e) => setNewPost({ ...newPost, text: e.target.value })}
           />
           <label htmlFor="author" aria-label="author">
             Say your name!
@@ -37,8 +40,8 @@ function Modal({ isModalOpen }) {
             name="author"
             type="text"
             required
-            value={post.author}
-            onChange={(e) => setPost({ ...post, author: e.target.value })}
+            value={newPost.author}
+            onChange={(e) => setNewPost({ ...newPost, author: e.target.value })}
           />
           <span>
             <button type="submit">Submit your hit</button>
