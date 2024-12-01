@@ -1,15 +1,22 @@
-function PostList({ posts }) {
-    console.log(posts)
+import styles from "./PostList.module.css";
 
+function PostList({ posts }) {
   return (
     <>
       {posts.length > 0 ? (
-        <ul>
+        <ul className={styles.postList}>
           {posts.map((post) => {
-            return <li>
+            return (
+              <li key={post.id} className={styles.listItem}>
+                <h4 className={styles.post}> Post hit</h4>
+                <hr/>
                 <p>{post.text}</p>
-                <p>{post.author}</p>
-            </li>
+                <div>
+                  <p className={styles.author}>Author:</p>
+                  <small className={styles.authorName}>{post.author}</small>
+                </div>
+              </li>
+            );
           })}
         </ul>
       ) : (

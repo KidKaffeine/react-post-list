@@ -17,11 +17,13 @@
   background-color: rgb(241, 203, 153);
   border-radius: 9px;
   border: none;
-  font-family: "Parkinsans", sans-serif;}
+  font-family: "Parkinsans", sans-serif;
+  color: rgb(88, 92, 65);
+}
 
 hr {
   width: 75%;
-  border: 1px solid #000;
+  border: 1px solid rgb(88, 92, 65);;
 }
 
 @media only screen and (min-width: 768px) {

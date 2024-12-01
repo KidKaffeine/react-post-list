@@ -1,8 +1,10 @@
 import styles from "./Modal.module.css";
 import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 function Modal({ isModalOpen, getNewPost }) {
   const [newPost, setNewPost] = useState({
+    id: uuidv4(),
     text: "",
     author: "",
   });
